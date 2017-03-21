@@ -1,15 +1,32 @@
 //Truc tiep
 
+console.log(this);
+const global = this;
+
+const name = 'KhoaPham';
+
 const obj = {
-    name: 'KhoaPham',
+    // name: name,
+    name,
     age: 30,
-    show: function(){
-        console.log(this.name + ' :: ' + this.age);
+    show: () => {
+        console.log(this === global);
         return 123;
     }
 };
-console.log(obj.show());
+
+console.log(obj);
+// console.log(obj.show());
 // console.log(obj);
+
+// const name = obj.name;
+// const age = obj.age;
+// const { name, age } = obj;
+
+// const { salary } = obj;
+
+// console.log(salary);
+
 
 //Tao qua lop doi tuong
 // function class
